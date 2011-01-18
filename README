@@ -1,0 +1,84 @@
+== keyboard-anywhere
+
+A virtual musical keyboard using the XBox Kinect, written in python and based 
+on libfreenect.
+
+Since releasing the video, we've had a lot of requests for code. I have 
+held off until this point, because the dependencies are quite complex, and
+getting the code running is probably more trouble than it's worth. Still,
+at least now you can read the code and see how we did it.
+
+NOTE: I have no intention of making an active project out of this. This 
+repository has been created to distribute the source code used in the demo 
+video, along with some basic information about setup and usage. Hopefully
+it will be sufficient for other uses to be able to run keyboard-anywhere
+on their own computer. If not, then hopefully the code will be useful for
+people developing for the Kinect. The code may be further developed and 
+features added, but I make no guarantees.
+
+== Basic Instructions
+
+So far, I've only attempted to make this work on GNU/Linux (or more 
+specifically, Ubuntu 10.04 and 10.10). All instructions assume you have
+a recent Ubuntu install. Mac or Windows users might be able to get it
+working, but you're on your own as far as dependencies are concerned.
+
+=== Dependencies
+
+The python script depends on:
+- freenect
+- numpy
+- pyopengl
+- PyQt4
+- PyQGLViewer
+- fluidsynth
+
+
+If you have all of them working in python, you're good to go. Otherwise
+skip to the "Detailed Instructions" section below.
+
+=== Usage
+
+WRITE ME
+
+
+== Detailed Instructions
+
+I got keyboard-anywhere working on a fresh Ubuntu 10.10 install with the
+following steps (hopefully I didn't leave any out).
+
+1.  apt-get install the following (this is AFAIK the minimal set):
+    (to get PyQGLViewer / PyQt4 working)
+    - build-essential
+    - pyqt4-devtools
+    - qt4-qmake
+    - libqt4-dev
+    - python-qt4-gl
+    - python-qt4-dev
+    - python-numpy
+    - python-setuptools
+
+    (to get freenect working)
+    - cmake
+    - libusb-1.0-0-dev
+    - freeglut3-dev
+    - libxmu-dev
+    - libxi-dev
+
+    (for audio output)
+    - fluidsynth
+    - fluid-soundfont-gm
+
+2.  use easy_install to get cython 0.14
+    - sudo easy_install cython
+
+3.  compile libfreenect (with BUILD_PYTHON set to ON)
+    (follow the instructions at https://github.com/OpenKinect/libfreenect)
+
+4.  download, compile and install QGLViewer and PyQGLViewer (follow instructions in the 
+    INSTALL or README files)
+    - https://gforge.inria.fr/frs/download.php/28138/libQGLViewer-2.3.9-py.tgz
+    - https://gforge.inria.fr/frs/download.php/28139/PyQGLViewer-0.9.0.zip
+
+
+
