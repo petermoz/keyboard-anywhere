@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-#   Copyright 2011 Peter Morton
+#   Copyright 2011 Peter Morton & Matthew Yeung
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -267,8 +267,16 @@ class Viewer(PyQGLViewer.QGLViewer):
         self.setKeyDescription(QtCore.Qt.Key_2, 
                 'set the {0} point of the keyboard'.format(self.kbt[1]))        
         self.setKeyDescription(QtCore.Qt.Key_3, 
-                'set the {0} point of the keyboard'.format(self.kbt[2]))        
-
+                'set the {0} point of the keyboard'.format(self.kbt[2]))
+        self.setKeyDescription(QtCore.Qt.Key_Z,
+                'shift the keyboard slightly in the local +Z direction')
+        self.setKeyDescription(QtCore.Qt.ShiftModifier + QtCore.Qt.Key_Z,
+                'shift the keyboard slightly in the local -Z direction')
+        self.setKeyDescription(QtCore.Qt.Key_Plus, 
+                'rotate the keyboard slightly about the local +Y axis')
+        self.setKeyDescription(QtCore.Qt.Key_Minus, 
+                'rotate the keyboard slightly about the local -Y axis')
+        
         self.kb_corners = np.zeros((3,3))
         self.kb_corner_index = 0                
         self.keyboard = Keyboard()
@@ -339,7 +347,6 @@ class Viewer(PyQGLViewer.QGLViewer):
         H[0:3, 3] = translation
         
         self.keyboard.set_transform(H)
-    
     
     def select(self, event):
         """ Handler for mouse select event. """
