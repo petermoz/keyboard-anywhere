@@ -1,4 +1,5 @@
-== keyboard-anywhere
+keyboard-anywhere
+=================
 
 A virtual musical keyboard using the XBox Kinect, written in python and based 
 on libfreenect.
@@ -8,16 +9,18 @@ held off until this point, because the dependencies are quite complex, and
 getting the code running is probably more trouble than it's worth. Still,
 at least now you can read the code and see how we did it.
 
-NOTE: I have no intention of making an active project out of this. This 
-repository has been created to distribute the source code used in the demo 
-video, along with some basic information about setup and usage. Hopefully
-it will be sufficient for other uses to be able to run keyboard-anywhere
-on their own computer. If not, then hopefully the code will be useful for
-people developing for the Kinect. The code may be further developed and 
-features added, but I make no guarantees.
+.. note:: 
 
-== Basic Instructions
+    I have no intention of making an active project out of this. This 
+    repository has been created to distribute the source code used in the demo 
+    video, along with some basic information about setup and usage. Hopefully
+    it will be sufficient for other uses to be able to run keyboard-anywhere
+    on their own computer. If not, then hopefully the code will be useful for
+    people developing for the Kinect. The code may be further developed and 
+    features added, but I make no guarantees.
 
+Basic Instructions
+------------------
 So far, I've only attempted to make this work on GNU/Linux (or more 
 specifically, Ubuntu 10.04 and 10.10). All instructions assume you have
 a recent Ubuntu install. Most (all?) of the libraries I have used are
@@ -25,9 +28,11 @@ cross platform, so if you've got some skill and patience, there's no
 reason you shouldn't be able to get this working on OS X or Windows.
 I'm just not providing any instructions for it.
 
-=== Dependencies
+Dependencies
+~~~~~~~~~~~~
 
-The python script depends on:
+The python script depends on::
+
 - freenect
 - numpy
 - pyopengl
@@ -39,16 +44,17 @@ The python script depends on:
 If you have all of them working in python, you're good to go. Otherwise
 skip to the "Detailed Dependencies" section below.
 
-=== Usage
+Usage
+~~~~~
 
 Assuming all the dependencies are working ok, running the script will produce 
 a seemingly empty grey window. This window is produced by QGLViewer, so you
 can press the 'h' key to access a help screen. A quick summary of that information
-is provided below.
+is provided below::
 
 - 	Double click the middle mouse to centre the view (you should see some keys)
 - 	Press ENTER to start the displaying of kinect data (here's where it will crash
-	if you didn't get freenect installed correctly, or your kinect isn't plugged in)
+    if you didn't get freenect installed correctly, or your kinect isn't plugged in)
 -	Left click and drag to rotate the view, right click and drag to move it
 -	Scroll wheel zooms the view
 
@@ -57,7 +63,7 @@ press the 'f' key to display FPS information. If it's 30, that's great, you're
 keeping up with the kinect. If it's significantly less than that (say 10), playing
 the keyboard might not be much fun, and you'll need to try a faster computer. 
 
-Now, define where you want the keyboard to be.
+Now, define where you want the keyboard to be::
 
 -	Orient the view so you can see the surface on which you want to place the keyboard
 -	Press ENTER to pause the kinect data
@@ -83,7 +89,8 @@ Now wave your hands / limbs / children through the areas marked out by the
 virtual keys, and make some music!
 
 
-== Detailed Dependencies
+Detailed Dependencies
+---------------------
 
 I got keyboard-anywhere working on a fresh Ubuntu 10.10 install with the
 following steps (hopefully I didn't leave any out).
