@@ -3,7 +3,6 @@ keyboard-anywhere
 
 A virtual musical keyboard using the XBox Kinect, written in python and based 
 on libfreenect.
-
 Since releasing the video, we've had a lot of requests for code. I have 
 held off until this point, because the dependencies are quite complex, and
 getting the code running is probably more trouble than it's worth. Still,
@@ -92,30 +91,33 @@ Detailed Dependencies
 ---------------------
 
 I got keyboard-anywhere working on a fresh Ubuntu 10.10 install with the
-following steps (hopefully I didn't leave any out).
+following steps.
 
 1.  apt-get install the following (this is AFAIK the minimal set):
 
-    (to get PyQGLViewer / PyQt4 working)
-    - build-essential
-    - pyqt4-devtools
-    - qt4-qmake
-    - libqt4-dev
-    - python-qt4-gl
-    - python-qt4-dev
-    - python-numpy
-    - python-setuptools
+    - PyQGLViewer / PyQt4
 
-    (to get freenect working)
-    - cmake
-    - libusb-1.0-0-dev
-    - freeglut3-dev
-    - libxmu-dev
-    - libxi-dev
+        - build-essential
+        - pyqt4-devtools
+        - qt4-qmake
+        - libqt4-dev
+        - python-qt4-gl
+        - python-qt4-dev
+        - python-numpy
+        - python-setuptools
 
-    (for audio output)
-    - fluidsynth
-    - fluid-soundfont-gm
+    - freenect
+
+        - cmake
+        - libusb-1.0-0-dev
+        - freeglut3-dev
+        - libxmu-dev
+        - libxi-dev
+
+    - audio output
+
+        - fluidsynth
+        - fluid-soundfont-gm
 
 2.  use easy_install to get cython 0.14 (``sudo easy_install cython``)
 
