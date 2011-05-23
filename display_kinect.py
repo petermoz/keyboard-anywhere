@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
 #   Copyright 2011 Peter Morton & Matthew Yeung
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,6 +14,12 @@
 #   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
+
+"""
+A simple demo showing reading data from the Kinect, and displaying
+it using libQGLViewer. 
+
+"""
 
 
 from PyQt4 import QtCore, QtGui

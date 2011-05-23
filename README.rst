@@ -33,13 +33,12 @@ Dependencies
 
 The python script depends on::
 
-- freenect
-- numpy
-- pyopengl
-- PyQt4
-- PyQGLViewer
-- fluidsynth
-
+    freenect
+    numpy
+    pyopengl
+    PyQt4
+    PyQGLViewer
+    fluidsynth
 
 If you have all of them working in python, you're good to go. Otherwise
 skip to the "Detailed Dependencies" section below.
@@ -50,10 +49,10 @@ Usage
 Assuming all the dependencies are working ok, running the script will produce 
 a seemingly empty grey window. This window is produced by QGLViewer, so you
 can press the 'h' key to access a help screen. A quick summary of that information
-is provided below::
+is provided below:
 
 - 	Double click the middle mouse to centre the view (you should see some keys)
-- 	Press ENTER to start the displaying of kinect data (here's where it will crash
+-   Press ENTER to start the displaying of kinect data (here's where it will crash
     if you didn't get freenect installed correctly, or your kinect isn't plugged in)
 -	Left click and drag to rotate the view, right click and drag to move it
 -	Scroll wheel zooms the view
@@ -63,7 +62,7 @@ press the 'f' key to display FPS information. If it's 30, that's great, you're
 keeping up with the kinect. If it's significantly less than that (say 10), playing
 the keyboard might not be much fun, and you'll need to try a faster computer. 
 
-Now, define where you want the keyboard to be::
+Now, define where you want the keyboard to be:
 
 -	Orient the view so you can see the surface on which you want to place the keyboard
 -	Press ENTER to pause the kinect data
@@ -96,6 +95,7 @@ I got keyboard-anywhere working on a fresh Ubuntu 10.10 install with the
 following steps (hopefully I didn't leave any out).
 
 1.  apt-get install the following (this is AFAIK the minimal set):
+
     (to get PyQGLViewer / PyQt4 working)
     - build-essential
     - pyqt4-devtools
@@ -117,14 +117,14 @@ following steps (hopefully I didn't leave any out).
     - fluidsynth
     - fluid-soundfont-gm
 
-2.  use easy_install to get cython 0.14
-    - sudo easy_install cython
+2.  use easy_install to get cython 0.14 (``sudo easy_install cython``)
 
 3.  compile libfreenect (with BUILD_PYTHON set to ON)
     (follow the instructions at https://github.com/OpenKinect/libfreenect)
 
 4.  download, compile and install QGLViewer and PyQGLViewer (follow instructions in the 
-    INSTALL or README files)
+    INSTALL or README files):
+
     - https://gforge.inria.fr/frs/download.php/28138/libQGLViewer-2.3.9-py.tgz
     - https://gforge.inria.fr/frs/download.php/28139/PyQGLViewer-0.9.0.zip
 
